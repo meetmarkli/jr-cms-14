@@ -9,6 +9,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('hello world');
+})
+
 app.use('/api', routes);
 
 app.use(validationErrorHandler);
